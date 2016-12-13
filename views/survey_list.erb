@@ -1,0 +1,17 @@
+<div class="well">
+  <h3>Survey List</h3>
+  <ul>
+    <% @surveys.each do |survey| %>
+      <li><%= survey.name %></li>
+    <% end %>
+  </ul>
+</div>
+
+
+<form action="/surveys" method="post">
+  <div class="form-group">
+    <label for="new-survey-name">New Survey Name</label>
+    <input type="text" name="new-survey-name" id="new-survey-name">
+  </div>
+  <button class="btn" type="submit">Create Survey</button>
+</form>

@@ -9,4 +9,11 @@ describe Survey do
       expect(test_survey.questions).to eq [test_q1, test_q2]
     end
   end
+
+  describe 'new survey creation' do
+    it "blocks creation of survey if name is empty" do
+      test_survey = Survey.new({:name => ""})
+      expect(test_survey.save).to eq false
+    end
+  end
 end
