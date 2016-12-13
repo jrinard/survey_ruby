@@ -15,5 +15,9 @@ describe Survey do
       test_survey = Survey.new({:name => ""})
       expect(test_survey.save).to eq false
     end
+    it "converts the survey name to capitalized" do
+      survey = Survey.create({:name => "the survey formerly known as prince"})
+      expect(survey.name).to eq "The Survey Formerly Known As Prince"
+    end
   end
 end
