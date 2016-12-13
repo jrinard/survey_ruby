@@ -2,7 +2,7 @@
   <h3>Survey List</h3>
   <ul>
     <% @surveys.each do |survey| %>
-      <li><%= survey.name %></li>
+      <li><a href="/surveys/<%= survey.id %>"><%= survey.name %></a></li>
     <% end %>
   </ul>
 </div>

@@ -1,0 +1,18 @@
+
+<div class="well">
+  <h3><%= @survey.name %></h3>
+  <ul>
+    <% @survey.questions.each do |question| %>
+      <li><%= question.text %></li>
+    <% end %>
+  </ul>
+</div>
+
+<form action="/questions" method="post">
+  <input type="hidden" value="<%= @survey.id %>" name="new-question-survey-id">
+  <div class="form-group">
+    <label for="new-question-text">New Question</label>
+    <input type="text" name="new-question-text" id="new-question-text">
+  </div>
+  <button class="btn">Add Question</button>
+</form>
