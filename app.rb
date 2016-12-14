@@ -5,6 +5,7 @@ also_reload("lib/**/*.rb")
 require("pg")
 require('./lib/survey')
 require('./lib/question')
+require('./lib/answer')
 
 get('/') do
   redirect '/surveys'
